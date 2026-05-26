@@ -12,7 +12,7 @@ import {
   MediaType,
 } from "./media.ts";
 
-type MediaEndpoint = "gifs" | "stickers" | "memes";
+type MediaEndpoint = "gifs" | "stickers" | "memes" | "emojis";
 
 export class MediaClient<TItem extends MediaItem<MediaType, string>, TCategory = MediaCategory> {
   constructor(

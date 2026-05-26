@@ -1,6 +1,18 @@
 export { KlipyClient } from "./client.ts";
 export { MediaClient } from "./media-client.ts";
 export type {
+  Emoji,
+  EmojiActionResponse,
+  EmojiCategoriesResponse,
+  EmojiCategory,
+  EmojiFormat,
+  EmojiListOptions,
+  EmojiListResponse,
+  EmojiRecentOptions,
+  EmojiReportOptions,
+  EmojiShareOptions,
+} from "./emojis.ts";
+export type {
   Gif,
   GifActionResponse,
   GifCategoriesResponse,
