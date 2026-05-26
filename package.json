@@ -1,0 +1,41 @@
+{
+  "name": "klipy-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the Klipy API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example": "tsx examples/basic.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "klipy",
+    "sdk",
+    "api",
+    "typescript"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
