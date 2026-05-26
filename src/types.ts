@@ -12,7 +12,5 @@ export interface PaginatedResponse {
 
 export interface Response {
     result: true;
-    data: {
-
-    }
+    data: {}
 }

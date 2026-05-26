@@ -1,16 +1,19 @@
 import { HttpClient } from "./http.ts";
-import { GifsClient } from "./gifs.ts";
-import { StickersClient } from "./stickers.ts";
+import { MediaClient } from "./media-client.ts";
+import type { Gif } from "./gifs.ts";
+import type { Meme } from "./memes.ts";
+import type { Sticker } from "./stickers.ts";
 
 export class KlipyClient {
-
   http: HttpClient;
-  gifs: GifsClient;
-  stickers: StickersClient;
+  gifs: MediaClient<Gif>;
+  memes: MediaClient<Meme>;
+  stickers: MediaClient<Sticker>;
 
   constructor(protected readonly apiKey: string) {
     this.http = new HttpClient(apiKey);
-    this.gifs = new GifsClient(this.http);
-    this.stickers = new StickersClient(this.http);
+    this.gifs = new MediaClient(this.http, "gifs");
+    this.memes = new MediaClient(this.http, "memes");
+    this.stickers = new MediaClient(this.http, "stickers");
   }
 }

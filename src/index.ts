@@ -1,11 +1,11 @@
 export { KlipyClient } from "./client.ts";
-export { GifsClient } from "./gifs.ts";
-export { StickersClient } from "./stickers.ts";
+export { MediaClient } from "./media-client.ts";
 export type {
   Gif,
   GifActionResponse,
   GifCategoriesResponse,
   GifCategory,
+  GifFormat,
   GifListOptions,
   GifListResponse,
   GifRecentOptions,
@@ -13,10 +13,23 @@ export type {
   GifShareOptions,
 } from "./gifs.ts";
 export type {
+  Meme,
+  MemeActionResponse,
+  MemeCategoriesResponse,
+  MemeCategory,
+  MemeFormat,
+  MemeListOptions,
+  MemeListResponse,
+  MemeRecentOptions,
+  MemeReportOptions,
+  MemeShareOptions,
+} from "./memes.ts";
+export type {
   Sticker,
   StickerActionResponse,
   StickerCategoriesResponse,
   StickerCategory,
+  StickerFormat,
   StickerListOptions,
   StickerListResponse,
   StickerRecentOptions,
