@@ -1,6 +1,6 @@
 import { PaginatedResponse, Response } from "./types.ts";
 
-export type MediaType = "gif" | "sticker" | "static-meme" | "emoji";
+export type MediaType = "gif" | "sticker" | "static-meme" | "emoji" | "clip";
 export type MediaSize = "xs" | "sm" | "md" | "hd";
 export type MediaFormat = "gif" | "webp" | "jpg" | "mp4" | "webm";
 

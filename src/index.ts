@@ -1,5 +1,18 @@
 export { KlipyClient } from "./client.ts";
+export { ClipsClient } from "./clips.ts";
 export { MediaClient } from "./media-client.ts";
+export type {
+  Clip,
+  ClipActionResponse,
+  ClipCategoriesResponse,
+  ClipCategory,
+  ClipFormat,
+  ClipListOptions,
+  ClipListResponse,
+  ClipRecentOptions,
+  ClipReportOptions,
+  ClipShareOptions,
+} from "./clips.ts";
 export type {
   Emoji,
   EmojiActionResponse,
