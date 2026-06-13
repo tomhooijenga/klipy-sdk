@@ -26,9 +26,14 @@
     "klipy",
     "sdk",
     "api",
-    "typescript"
+    "typescript",
+    "tenor"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhooijenga/klipy-sdk.git"
+  },
   "engines": {
     "node": ">=18"
   },
