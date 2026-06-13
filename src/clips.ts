@@ -36,17 +36,26 @@ export class ClipsClient extends MediaClient<Clip, ClipCategory> {
   }
 
   public async trending<TResponse = MediaListResponse<Clip>>(
-    options: MediaListOptions<Extract<keyof Clip["file"][keyof Clip["file"]], string>> = {},
+    options: MediaListOptions<
+      Extract<keyof Clip["file"][keyof Clip["file"]], string>
+    > = {},
   ): Promise<TResponse> {
-    const response = await super.trending<MediaListResponse<ClipApiItem>>(options);
+    const response = await super.trending<MediaListResponse<ClipApiItem>>(
+      options,
+    );
     return this.normalizeListResponse(response) as unknown as TResponse;
   }
 
   async search<TResponse = MediaListResponse<Clip>>(
     query: string,
-    options: MediaListOptions<Extract<keyof Clip["file"][keyof Clip["file"]], string>> = {},
+    options: MediaListOptions<
+      Extract<keyof Clip["file"][keyof Clip["file"]], string>
+    > = {},
   ): Promise<TResponse> {
-    const response = await super.search<MediaListResponse<ClipApiItem>>(query, options);
+    const response = await super.search<MediaListResponse<ClipApiItem>>(
+      query,
+      options,
+    );
     return this.normalizeListResponse(response) as unknown as TResponse;
   }
 
@@ -54,7 +63,10 @@ export class ClipsClient extends MediaClient<Clip, ClipCategory> {
     customerId: string,
     options: MediaRecentOptions = {},
   ): Promise<TResponse> {
-    const response = await super.recent<MediaListResponse<ClipApiItem>>(customerId, options);
+    const response = await super.recent<MediaListResponse<ClipApiItem>>(
+      customerId,
+      options,
+    );
     return this.normalizeListResponse(response) as unknown as TResponse;
   }
 
@@ -80,7 +92,6 @@ export class ClipsClient extends MediaClient<Clip, ClipCategory> {
    * }
    */
   protected convertClipToMedia(clip: ClipApiItem): void {
-
     Object.entries(clip.file_meta).forEach(([format, file]) => {
       const url = clip.file[format];
       if (url) {
@@ -100,4 +111,3 @@ export class ClipsClient extends MediaClient<Clip, ClipCategory> {
     return response;
   }
 }
-

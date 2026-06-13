@@ -22,4 +22,3 @@ export type MemeListOptions = MediaListOptions<MemeFormat>;
 export type MemeRecentOptions = MediaRecentOptions;
 export type MemeShareOptions = MediaShareOptions;
 export type MemeReportOptions = MediaReportOptions;
-

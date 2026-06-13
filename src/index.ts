@@ -1,6 +1,4 @@
 export { KlipyClient } from "./client.ts";
-export { ClipsClient } from "./clips.ts";
-export { MediaClient } from "./media-client.ts";
 export type {
   Clip,
   ClipActionResponse,
@@ -61,5 +59,3 @@ export type {
   StickerReportOptions,
   StickerShareOptions,
 } from "./stickers.ts";
-
-

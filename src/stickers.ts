@@ -16,10 +16,10 @@ export type Sticker = MediaItem<"sticker", StickerFormat>;
 export type StickerFile = MediaFile;
 export type StickerCategory = MediaCategory;
 export type StickerListResponse = MediaListResponse<Sticker>;
-export type StickerCategoriesResponse = MediaCategoriesResponse<StickerCategory>;
+export type StickerCategoriesResponse =
+  MediaCategoriesResponse<StickerCategory>;
 export type StickerActionResponse = MediaActionResponse;
 export type StickerListOptions = MediaListOptions<StickerFormat>;
 export type StickerRecentOptions = MediaRecentOptions;
 export type StickerShareOptions = MediaShareOptions;
 export type StickerReportOptions = MediaReportOptions;
-

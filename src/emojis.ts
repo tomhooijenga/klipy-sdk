@@ -22,4 +22,3 @@ export type EmojiListOptions = MediaListOptions<EmojiFormat>;
 export type EmojiRecentOptions = MediaRecentOptions;
 export type EmojiShareOptions = MediaShareOptions;
 export type EmojiReportOptions = MediaReportOptions;
-

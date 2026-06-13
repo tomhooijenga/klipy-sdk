@@ -4,7 +4,7 @@ import type { Emoji } from "./emojis.ts";
 import type { Gif } from "./gifs.ts";
 import type { Meme } from "./memes.ts";
 import type { Sticker } from "./stickers.ts";
-import {Clip, ClipsClient} from "./clips.ts";
+import { Clip, ClipsClient } from "./clips.ts";
 
 export class KlipyClient {
   http: HttpClient;
