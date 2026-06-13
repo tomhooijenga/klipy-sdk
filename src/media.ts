@@ -11,7 +11,10 @@ export interface MediaFile {
   size: number;
 }
 
-export interface MediaItem<TType extends MediaType, TFormat extends string = MediaFormat> {
+export interface MediaItem<
+  TType extends MediaType,
+  TFormat extends string = MediaFormat,
+> {
   id: number;
   slug: string;
   title: string;
@@ -33,7 +36,9 @@ export interface MediaListResponse<TItem> extends PaginatedResponse {
   };
 }
 
-export interface MediaCategoriesResponse<TCategory = MediaCategory> extends Response {
+export interface MediaCategoriesResponse<
+  TCategory = MediaCategory,
+> extends Response {
   data: {
     data: TCategory[];
   };
@@ -62,6 +67,18 @@ export interface MediaShareOptions {
 
 export interface MediaReportOptions {
   customerId?: string;
-  reason: string;
+  reason:
+    | "nudity"
+    | "violence"
+    | "hate_speech"
+    | "harassment"
+    | "spam"
+    | "misinformation"
+    | "copyright"
+    | "offensive"
+    | "illegal"
+    | "broken"
+    | "low_quality"
+    | "not_relevant"
+    | "impersonation";
 }
-
