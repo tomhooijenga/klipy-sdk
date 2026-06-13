@@ -1,4 +1,5 @@
 export { KlipyClient } from "./client.ts";
+export { SearchClient } from "./search.ts";
 export type {
   Clip,
   ClipActionResponse,
@@ -59,3 +60,8 @@ export type {
   StickerReportOptions,
   StickerShareOptions,
 } from "./stickers.ts";
+export type {
+  SearchAutocompleteResponse,
+  SearchOptions,
+  SearchSuggestionsResponse,
+} from "./search.ts";
