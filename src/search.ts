@@ -6,15 +6,11 @@ export interface SearchOptions {
 }
 
 export interface SearchSuggestionsResponse extends Response {
-  data: {
-    data: string[];
-  };
+  data: string[];
 }
 
 export interface SearchAutocompleteResponse extends Response {
-  data: {
-    data: string[];
-  };
+  data: string[];
 }
 
 export class SearchClient {
