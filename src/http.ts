@@ -1,6 +1,6 @@
 export class HttpClient {
   protected get baseUrl() {
-    return `https://api.klipy.com/v1/${this.apiKey}`;
+    return `https://api.klipy.com/api/v1/${encodeURIComponent(this.apiKey)}`;
   }
 
   constructor(protected readonly apiKey: string) {}
