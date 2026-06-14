@@ -28,7 +28,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
 
 - `klipy.gifs`
   - `trending(options)`
-  - `search(query, options)`
+  - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
   - `items(slugs)`
@@ -37,7 +37,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `report(slug, options)`
 - `klipy.stickers`
   - `trending(options)`
-  - `search(query, options)`
+  - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
   - `items(slugs)`
@@ -46,7 +46,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `report(slug, options)`
 - `klipy.memes`
   - `trending(options)`
-  - `search(query, options)`
+  - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
   - `items(slugs)`
@@ -55,7 +55,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `report(slug, options)`
 - `klipy.emojis`
   - `trending(options)`
-  - `search(query, options)`
+  - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
   - `items(slugs)`
@@ -64,7 +64,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `report(slug, options)`
 - `klipy.clips`
   - `trending(options)`
-  - `search(query, options)`
+  - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
   - `items(slugs)`
