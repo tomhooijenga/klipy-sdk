@@ -76,5 +76,6 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `autocomplete(query, options?)`
 
 # Helpful links
+
 - [Klipy api docs](https://docs.klipy.com/getting-started)
-- [Getting a klipy api key](https://partner.klipy.com/)
+- [Getting a Klipy api key](https://partner.klipy.com/)

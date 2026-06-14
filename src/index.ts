@@ -15,7 +15,7 @@ export type {
 } from "./clips.ts";
 export type {
   Emoji,
-  EmojiActionResponse,
+  EmojiStatusResponse,
   EmojiCategoriesResponse,
   EmojiCategory,
   EmojiFile,

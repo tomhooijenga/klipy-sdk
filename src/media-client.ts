@@ -19,8 +19,8 @@ export class MediaClient<
   TCategory = MediaCategory,
 > {
   constructor(
-    private readonly http: HttpClient,
-    private readonly endpoint: MediaEndpoint,
+    protected readonly http: HttpClient,
+    protected readonly endpoint: MediaEndpoint,
   ) {}
 
   public trending<TResponse = MediaListResponse<TItem>>(
