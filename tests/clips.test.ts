@@ -5,8 +5,7 @@ import clipsList from "./fixtures/clips-list.json" with { type: "json" };
 describe("clips", () => {
   afterEach(() => vi.restoreAllMocks());
 
-  const client = new KlipyClient("TEST_KEY");
-  const mediaEndpoint = client.clips;
+  const { clips } = new KlipyClient("TEST_KEY");
 
   for (const method of ["trending", "search", "recent"] as const) {
     it(`${method} response normalization`, async () => {
@@ -21,7 +20,7 @@ describe("clips", () => {
 
       vi.stubGlobal("fetch", fetchSpy);
 
-      const response = await mediaEndpoint.trending({ page: 1, perPage: 10 });
+      const response = await clips.trending({ page: 1, perPage: 10 });
 
       expect(fetchSpy).toHaveBeenCalledTimes(1);
       expect(response.result).toBe(true);

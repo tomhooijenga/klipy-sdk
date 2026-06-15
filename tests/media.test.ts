@@ -23,9 +23,9 @@ describe("Media", () => {
 
     describe(media, () => {
       it("trending", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
-          expect(urlStr).toContain(`/${media}/trending`);
-          assertUrlHasParams(urlStr, { page: 1, per_page: 10 });
+        const fetchSpy = stubFetch((url, init) => {
+          expect(url).toContain(`/${media}/trending`);
+          assertUrlHasParams(url, { page: 1, per_page: 10 });
           expect(init?.method).toBe("GET");
         }, listResponse);
 
@@ -35,9 +35,9 @@ describe("Media", () => {
       });
 
       it("search", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
-          expect(urlStr).toContain(`/${media}/search`);
-          assertUrlHasParams(urlStr, { q: "funny cats", page: 2, per_page: 5 });
+        const fetchSpy = stubFetch((url, init) => {
+          expect(url).toContain(`/${media}/search`);
+          assertUrlHasParams(url, { q: "funny cats", page: 2, per_page: 5 });
           expect(init?.method).toBe("GET");
         }, listResponse);
 
@@ -47,10 +47,10 @@ describe("Media", () => {
       });
 
       it("recent", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
+        const fetchSpy = stubFetch((url, init) => {
           // customer id should be URI encoded in path
-          expect(urlStr).toContain(`/${media}/recent/test%2Fcustomer`);
-          assertUrlHasParams(urlStr, { page: 3, per_page: 20 });
+          expect(url).toContain(`/${media}/recent/test%2Fcustomer`);
+          assertUrlHasParams(url, { page: 3, per_page: 20 });
           expect(init?.method).toBe("GET");
         }, listResponse);
 
@@ -60,10 +60,10 @@ describe("Media", () => {
       });
 
       it("items", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
-          expect(urlStr).toContain(`/${media}/items`);
+        const fetchSpy = stubFetch((url, init) => {
+          expect(url).toContain(`/${media}/items`);
           // when array is provided, slugs join with comma then are percent-encoded
-          assertUrlHasParams(urlStr, { slugs: ["one", "two", "three"] });
+          assertUrlHasParams(url, { slugs: ["one", "two", "three"] });
           expect(init?.method).toBe("GET");
         }, listResponse);
 
@@ -73,9 +73,9 @@ describe("Media", () => {
       });
 
       it("deleteRecent", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
-          expect(urlStr).toContain(`/${media}/recent/test%2Fcustomer`);
-          assertUrlHasParams(urlStr, { slug: "recent-slug" });
+        const fetchSpy = stubFetch((url, init) => {
+          expect(url).toContain(`/${media}/recent/test%2Fcustomer`);
+          assertUrlHasParams(url, { slug: "recent-slug" });
           expect(init?.method).toBe("DELETE");
         });
 
@@ -85,9 +85,9 @@ describe("Media", () => {
       });
 
       it("share", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
-          expect(urlStr).toContain(`/${media}/share/some-slug`);
-          assertUrlHasParams(urlStr, {
+        const fetchSpy = stubFetch((url, init) => {
+          expect(url).toContain(`/${media}/share/some-slug`);
+          assertUrlHasParams(url, {
             customer_id: "cid123",
             q: "hello world",
           });
@@ -103,9 +103,9 @@ describe("Media", () => {
       });
 
       it("report", async () => {
-        const fetchSpy = stubFetch((urlStr, init) => {
-          expect(urlStr).toContain(`/${media}/report/problematic-slug`);
-          assertUrlHasParams(urlStr, { customer_id: "cidX", reason: "spam" });
+        const fetchSpy = stubFetch((url, init) => {
+          expect(url).toContain(`/${media}/report/problematic-slug`);
+          assertUrlHasParams(url, { customer_id: "cidX", reason: "spam" });
           expect(init?.method).toBe("POST");
         });
 

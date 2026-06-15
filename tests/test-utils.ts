@@ -1,7 +1,7 @@
 import { vi, expect } from "vitest";
 
 export function stubFetch(
-  assertFn: (urlStr: string, init?: RequestInit) => void,
+  assertFn: (url: string, init?: RequestInit) => void,
   response?: unknown,
 ) {
   const spy = vi.fn((url: string, init?: RequestInit) => {
@@ -27,13 +27,13 @@ export function stubFetch(
  * - If a value is `undefined` the helper asserts the param is not present.
  */
 export function assertUrlHasParams(
-  urlStr: string,
+  urlString: string,
   params: Record<
     string,
     string | number | boolean | Array<string | number> | undefined
   >,
 ) {
-  const url = new URL(urlStr);
+  const url = new URL(urlString);
   const search = url.searchParams;
 
   for (const [key, value] of Object.entries(params)) {
