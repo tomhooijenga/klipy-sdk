@@ -21,7 +21,7 @@ export type EmojiCategoriesResponse = MediaCategoriesResponse<EmojiCategory>;
 export interface EmojiGenerateResponse extends Response {
   data: {
     id: string;
-  }
+  };
 }
 
 export type EmojiStatusResponse =

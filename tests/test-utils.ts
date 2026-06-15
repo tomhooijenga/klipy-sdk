@@ -1,12 +1,17 @@
 import { vi, expect } from "vitest";
 
-export function stubFetch(assertFn?: (urlStr: string, init?: RequestInit) => void) {
+export function stubFetch(
+  assertFn: (urlStr: string, init?: RequestInit) => void,
+  response?: unknown,
+) {
   const spy = vi.fn((url: string, init?: RequestInit) => {
-    const urlStr = String(url);
-    if (assertFn) assertFn(urlStr, init);
+    assertFn(String(url), init);
 
-    // return a minimal JSON response so client parsing succeeds
-    return Promise.resolve({ ok: true, status: 200, json: async () => ({}) } as any);
+    return Promise.resolve({
+      ok: true,
+      status: 200,
+      json: async () => response,
+    });
   });
 
   vi.stubGlobal("fetch", spy);
@@ -23,7 +28,10 @@ export function stubFetch(assertFn?: (urlStr: string, init?: RequestInit) => voi
  */
 export function assertUrlHasParams(
   urlStr: string,
-  params: Record<string, string | number | boolean | Array<string | number> | undefined>,
+  params: Record<
+    string,
+    string | number | boolean | Array<string | number> | undefined
+  >,
 ) {
   const url = new URL(urlStr);
   const search = url.searchParams;
@@ -45,4 +53,3 @@ export function assertUrlHasParams(
     expect(actual).toBe(expected);
   }
 }
-
