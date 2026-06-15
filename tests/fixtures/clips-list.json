@@ -1,0 +1,37 @@
+{
+  "result": true,
+  "data": {
+    "data": [
+      {
+        "url": "https://klipy.com/clips/they-love-me-spider-man",
+        "title": "They love me - Spider-man",
+        "slug": "they-love-me-spider-man",
+        "file": {
+          "mp4": "https://static.klipy.com/ii/d0f4326653a6a0faab99b9987b9a194d/06/8b/QO60JGjF.mp4",
+          "gif": "https://static.klipy.com/ii/d0f4326653a6a0faab99b9987b9a194d/06/8b/adW975M3.gif",
+          "webp": "https://static.klipy.com/ii/d0f4326653a6a0faab99b9987b9a194d/06/8b/TyGnppPI.webp"
+        },
+        "file_meta": {
+          "mp4": {
+            "width": 1280,
+            "height": 592
+          },
+          "gif": {
+            "width": 320,
+            "height": 148
+          },
+          "webp": {
+            "width": 320,
+            "height": 148
+          }
+        },
+        "tags": [],
+        "type": "clip",
+        "blur_preview": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAJgAlAAD//gARTGF2YzU4LjEzNC4xMDAA/9sAQwAIBAQEBAQFBQUFBQUGBgYGBgYGBgYGBgYGBwcHCAgIBwcHBgYHBwgICAgJCQkICAgICQkKCgoMDAsLDg4OEREU/8QAgQAAAgMBAQEAAAAAAAAAAAAABwMABgUBBAIBAQEBAQAAAAAAAAAAAAAAAAMBAgQQAAEDAwIFAgILAQAAAAAAAAEEAwIAEQUSBjFBEyEHQhQIgVNykXFSFySTMyKxIxEAAgEDAwQDAQAAAAAAAAAAAQIABAMRcTIhMQVBEoIzgbH/wAARCAATACgDASIAAhEAAxEA/9oADAMBAAIRAxEAPwAfeHfH+3d5Icg7lIOzmw7CDehww7GN6tqjw146TPssTbUhx4kQHuDyF6oPjzIu4vHLFLSp1LIPwjeEjY3Ha8edWSW8FD2bQxWOBS+1/wBG5D+vYfisarXraKMjUzdmmu37mE5J6CMh4k2pLOJU8m1Oh6bg6MHLiMBe0pT43HOt38idifQKv3zWK1vpvbeddya0e468dBbBsGry9FEPCZhFncWxkU8rNOg2ErAgjiPlVpHS4pyQxycaTXcKa7Tuo9Cg9RnnzBH5i8e7e2agxz2LbdhJ92cJ63DPsI3HGh/Rb+IyUZYrD2kD+oc4G/poSVbgAfiEhJWfcH3m4mMHJxiSCQJEAkc677tV1Op1nNfDVqOr7b0upRXtp0Meh+9dV/sY4qUvfyOuT+tIn/aexnc0mZDTOQWNNg3EIPTjEfIG1eSpyqUnj9i903v8Y9Xk8ivjGKpWoUCPeIdclMD7tRNIqVKV90416T//2Q=="
+      }
+    ],
+    "current_page": 1,
+    "per_page": 10,
+    "has_next": true
+  }
+}
