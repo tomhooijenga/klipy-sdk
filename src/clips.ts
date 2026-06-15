@@ -87,7 +87,6 @@ export class ClipsClient extends MediaClient<Clip, ClipCategory> {
    *   "mp4": {
    *     "width": 1280,
    *     "height": 536,
-   *     "size": 215222
    *   },
    * }
    */
@@ -96,12 +95,20 @@ export class ClipsClient extends MediaClient<Clip, ClipCategory> {
       const url = clip.file[format];
       if (url) {
         file.url = url;
+        // size is not reported for clips
+        file.size = 0;
       }
     });
 
     // Clip endpoints return format-indexed file payloads, so we normalize into the SDK Clip shape.
-    (clip as unknown as Clip).file = clip.file_meta as unknown as Clip["file"];
-    delete (clip as { file_meta?: Record<string, MediaFile> }).file_meta;
+    const file = clip.file_meta as Record<ClipFormat, ClipFile>;
+    (clip as unknown as Clip).file = {
+      xs: file,
+      sm: file,
+      md: file,
+      hd: file,
+    };
+    delete (clip as { file_meta?: unknown }).file_meta;
   }
 
   protected normalizeListResponse(
