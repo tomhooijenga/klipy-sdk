@@ -1,6 +1,6 @@
 {
   "name": "klipy-sdk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "TypeScript SDK for the Klipy API",
   "type": "module",
   "main": "./dist/index.js",
