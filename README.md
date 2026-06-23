@@ -27,7 +27,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
 ## Endpoints
 
 - `klipy.gifs`
-  - `trending(options)`
+  - `trending(options?)`
   - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
@@ -36,7 +36,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `share(slug, options?)`
   - `report(slug, options)`
 - `klipy.stickers`
-  - `trending(options)`
+  - `trending(options?)`
   - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
@@ -45,7 +45,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `share(slug, options?)`
   - `report(slug, options)`
 - `klipy.memes`
-  - `trending(options)`
+  - `trending(options?)`
   - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
@@ -54,7 +54,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `share(slug, options?)`
   - `report(slug, options)`
 - `klipy.emojis`
-  - `trending(options)`
+  - `trending(options?)`
   - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
@@ -63,7 +63,7 @@ console.log(trending.data.data.map((media) => media.file.md.gif.url));
   - `share(slug, options?)`
   - `report(slug, options)`
 - `klipy.clips`
-  - `trending(options)`
+  - `trending(options?)`
   - `search(query, options?)`
   - `categories(locale?)`
   - `recent(customerId, options?)`
